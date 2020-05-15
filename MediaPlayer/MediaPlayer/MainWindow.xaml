@@ -1,0 +1,69 @@
+﻿<Window Name="window1" x:Class="MediaPlayer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MediaPlayer"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="700" Width="1000">
+    <Window.TaskbarItemInfo>
+        <TaskbarItemInfo x:Name="myInfo" Description="MyApp">
+            <TaskbarItemInfo.ThumbButtonInfos>
+                <ThumbButtonInfo ImageSource="C:\Users\Carnival Stores\Desktop\MediaPlayer\icons\rewind.png" Click="ThumbButtonInfo_Click"/>
+                <ThumbButtonInfo ImageSource="C:\Users\Carnival Stores\Desktop\MediaPlayer\icons\pause.png" Click="ThumbButtonInfo_Click_1"/>
+                <ThumbButtonInfo ImageSource="C:\Users\Carnival Stores\Desktop\MediaPlayer\icons\forward.png" Click="ThumbButtonInfo_Click_2"/>
+
+            </TaskbarItemInfo.ThumbButtonInfos>
+        </TaskbarItemInfo> 
+    </Window.TaskbarItemInfo>
+    <Grid Margin="0,-2,0,2">
+
+        <Button ToolTip="Play" BorderThickness="0" Background="White"  Name="palyBtn" Click="palyBtn_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Margin="402,566,0,0" Height="80" RenderTransformOrigin="6.241,0.844">
+            <Image Source="C:\Users\Carnival Stores\Desktop\MediaPlayer\icons\play.png" Height="80" Width="80" RenderTransformOrigin="0.5,0.5"/>
+
+        </Button>
+        <Button ToolTip="stop" BorderThickness="0" Background="White" Name="stopBtn" Click="stopBtn_Click"  HorizontalAlignment="Left" Margin="478,572,0,0" VerticalAlignment="Top" Width="75" Height="75">
+            <Image Name="stopimg" Source="C:\Users\Carnival Stores\Desktop\MediaPlayer\icons\stop.png" Height="60" Width="60" RenderTransformOrigin="0.5,0.5"/>
+
+        </Button>
+        <Button ToolTip="Pause" BorderThickness="0" Background="White" Name="pauseBtn" Click="pauseBtn_Click"  HorizontalAlignment="Left" Margin="327,572,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.505,1.235" Height="75">
+            <Image Source="C:\Users\Carnival Stores\Desktop\MediaPlayer\icons\pause.png" Height="60" Width="60" RenderTransformOrigin="0.542,0.51"/>
+
+        </Button>
+        <Button ToolTip="Browse" BorderThickness="0" Background="White"  Name="openBtn"  Click="openBtn_Click" HorizontalAlignment="Left" Margin="77,574,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.653,1.323"  >
+            <Image Source="C:\Users\Carnival Stores\Desktop\MediaPlayer\icons\open.png" Height="50" Width="50" RenderTransformOrigin="0.542,0.51"/>
+
+        </Button>
+        <Button ToolTip="rewind"  BorderThickness="0" Background="White" Click="rewindBtn_Click" Name="rewindBtn" HorizontalAlignment="Left" Margin="278,586,0,0" VerticalAlignment="Top" Width="50" Height="50" >
+            <Image Source="C:\Users\Carnival Stores\Desktop\MediaPlayer\icons\rewind.png" Height="45" Width="45" RenderTransformOrigin="0.542,0.51"/>
+
+        </Button>
+        <Button ToolTip="FastForward" BorderThickness="0" Background="White"  Click="fastforwardBtn_Click"  Name="fastforwardBtn" HorizontalAlignment="Left" Margin="556,590,0,0" VerticalAlignment="Top" Width="50" Height="50">
+            <Image  Source="C:\Users\Carnival Stores\Desktop\MediaPlayer\icons\forward.png" Height="45" Width="45" RenderTransformOrigin="0.542,0.51"/>
+
+        </Button>
+        <MediaElement  MediaEnded="mediaElement_MediaEnded" MediaOpened="mediaElement_MediaOpened" Name="mediaElement" HorizontalAlignment="Left" Height="466" Margin="10,10,0,0" VerticalAlignment="Top" Width="719" LoadedBehavior="Manual"/>
+        <Slider ValueChanged="slider1_ValueChanged" Name="slider1" HorizontalAlignment="Left" Margin="46,511,0,0" VerticalAlignment="Top" Height="42" Width="865"/>
+        <Slider ValueChanged="Volume_slider_ValueChanged" Name="Volume_slider" HorizontalAlignment="Left" Margin="851,575,0,0" VerticalAlignment="Top" Height="44" Width="131"/>
+        <Label ToolTip="Volume" FontSize="20"  HorizontalAlignment="Left" Margin="781,557,0,0" VerticalAlignment="Top">
+            <Image Source="C:\Users\Carnival Stores\Desktop\MediaPlayer\icons\volume.png" Height="46" Width="48" RenderTransformOrigin="0.542,0.51"/>
+
+        </Label>
+        <Label ToolTip="Speed"  FontSize="20"  HorizontalAlignment="Left" Margin="779,616,0,-3" VerticalAlignment="Top">
+            <Image Source="C:\Users\Carnival Stores\Desktop\MediaPlayer\icons\speed.jfif" Height="46" Width="48" RenderTransformOrigin="0.542,0.51"/>
+        </Label>
+        <Image  Source="C:\Users\Carnival Stores\Desktop\MediaPlayer\icons\plus.jfif" Margin="969,621,3,28"></Image>
+        <Image Source="C:\Users\Carnival Stores\Desktop\MediaPlayer\icons\minus.jfif" Margin="849,621,123,28"></Image>
+        <ListBox BorderThickness="20"  SelectionChanged="listbox1_SelectionChanged"  MouseDoubleClick="listbox1_MouseDoubleClick"   Name="listbox1"   HorizontalAlignment="Left" Height="466" Margin="746,10,0,0" VerticalAlignment="Top" Width="236"/>
+        <Label Name="label1" FontSize="15"  HorizontalAlignment="Left" Margin="-1,515,0,0" VerticalAlignment="Top"/>
+        <Label Name="label2" FontSize="15" HorizontalAlignment="Left" Margin="918,515,0,0" VerticalAlignment="Top"/>
+        <Slider ValueChanged="speedslider_ValueChanged" Name="speedslider" HorizontalAlignment="Left" Margin="851,638,0,0" VerticalAlignment="Top" Height="19" Width="141">
+
+        </Slider>
+
+        <!--<Label  Name="label2" FontSize="30"  HorizontalAlignment="Left" Margin="949,493,0,0" VerticalAlignment="Top"/>-->
+
+
+
+    </Grid>
+</Window>
